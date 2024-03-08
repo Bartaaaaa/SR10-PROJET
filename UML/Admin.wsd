@@ -1,0 +1,19 @@
+@startuml Admin
+skinparam actorStyle awesome
+actor Admin as "Admin"
+
+
+Admin --> (Visualisation des demandes d'enregistrement d'organisation)
+(Validation/Refus) .> (Visualisation des demandes d'enregistrement d'organisation) : extends
+(Validation des demandes refusées ou validées) .> (Visualisation des demandes d'enregistrement d'organisation) : extends
+
+Admin --> (Gestion des utilisateurs)
+(Modification/Suprression) .> (Gestion des utilisateurs) : extends
+(Attribution du rôle administrateur) .> (Gestion des utilisateurs) : extends
+Admin --> (Gestion des recruteurs)
+
+
+
+Admin --> (créer un compte)
+Admin --> (s'authentifier)
+(s'authentifier) .> (créer un compte) : includes

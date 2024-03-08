@@ -1,0 +1,21 @@
+@startuml Rectruteur
+skinparam actorStyle awesome
+actor Recruteur as "Recruteur"
+
+
+
+
+Recruteur --> (Gestion des offres valides)
+Recruteur --> (Gestion des offres expirées)
+(Pagination).> (Gestion des offres valides) : extends
+(Pagination).> (Gestion des offres expirées) : extends
+
+Recruteur --> (créer un compte)
+Recruteur --> (s'authentifier)
+(s'authentifier) .> (créer un compte) : includes
+
+Recruteur --> (Visualisation des candidatures)
+(Télécharger les dossiers) .> (Visualisation des candidatures) : extends
+
+
+

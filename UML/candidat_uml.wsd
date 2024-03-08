@@ -1,0 +1,54 @@
+@startuml Candidat
+skinparam actorStyle awesome
+
+actor Candidat as "Candidat"
+
+
+
+
+
+
+Candidat --> (Candidater à une offre)
+Candidat --> (s'authentifier)
+(s'authentifier) .> (créer un compte) : includes
+Candidat --> (Visualiser les offres)
+(Trier) .> (Visualiser les offres) : extends
+(Filtrer) .> (Visualiser les offres) : extends
+(Visualiser une offre) .> (Visualiser les offres valides) : extends
+
+(Candidater à une offre)  .> (Visualiser les offres valides) : includes
+
+Candidat --> (Visualiser la liste des candidatures)
+(Selectionner) .> (Visualiser la liste des candidatures) : extends
+( Compléter) .> (Visualiser la liste des candidatures) : extends
+( annuler) .> (Visualiser la liste des candidatures) : extends
+@enduml
+
+Recruteur : 
+@startuml
+skinparam actorStyle awesome
+actor Recruteur as "Recruteur"
+
+
+
+
+Recruteur --> (Gestion des offres valides)
+Recruteur --> (Gestion des offres expirées)
+(Pagination).> (Gestion des offres valides) : extends
+(Pagination).> (Gestion des offres expirées) : extends
+
+Recruteur --> (créer un compte)
+Recruteur --> (s'authentifier)
+(s'authentifier) .> (créer un compte) : includes
+
+Recruteur --> (Visualisation des candidatures)
+(Télécharger les dossiers) .> (Visualisation des candidatures) : extends
+
+
+
+
+
+
+
+
+@enduml
