@@ -17,3 +17,4 @@ Admin --> (Gestion des recruteurs)
 Admin --> (créer un compte)
 Admin --> (s'authentifier)
 (s'authentifier) .> (créer un compte) : includes
+@enduml

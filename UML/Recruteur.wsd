@@ -18,4 +18,4 @@ Recruteur --> (Visualisation des candidatures)
 (Télécharger les dossiers) .> (Visualisation des candidatures) : extends
 
 
-
+@enduml
